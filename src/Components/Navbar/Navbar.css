@@ -1,0 +1,212 @@
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    color: var(--black-color);
+}
+a {
+    color: #2B3445;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px ;
+}
+.nav-logo .nav-logo-img1 {
+    width: 40px;
+    height: 35px;
+}
+.nav-logo .nav-logo-img2 {
+    color: var(--grey-color);
+    font-size: 28px;
+    padding-bottom: 5px;
+    font-weight: 900;
+}
+.nav-logo .nav-logo-img2 span {
+    color: #ca272c;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+.nav-menu li a:hover {
+    scale: 1.03;
+}
+.nav-menu hr {
+    border: none;
+    width: 90%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--light-red);
+}
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-login-cart button {
+    width: 90px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    outline: 0;
+    border: 1px solid #7a7a7a;
+    border-radius: 40px;
+    color: #515151d3;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.nav-login-cart button:hover {
+    background-color: #f2f1f1cc;
+}
+.nav-login-cart button:active {
+    background-color: #f3f3f3 ;
+}
+.nav-login-cart img {
+    width: 30px;
+}
+.nav-cart-count {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -28px;
+    margin-left: -30px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-family:  sans-serif;
+    font-weight: 600;
+    background-color: var(--light-red);
+    color: #fff;
+}
+.nav-dropdown {
+    display: none;
+}
+
+/* Navbar Responsive */
+@media (max-width : 1280px ) {
+    .navbar {
+        padding: 12px 50px ;
+    }
+    .nav-logo img {
+        width: 40px;
+    }
+    .nav-logo p {
+        font-size: 25px;
+    }
+    .nav-menu {
+        gap: 30px;
+        font-size: 18px;
+    }
+    .nav-login-cart {
+        gap: 30px;
+    }
+    .nav-login-cart button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .nav-cart-count {
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width : 1024px ) {
+    .navbar {
+        padding: 12px 30px;
+    }
+    .nav-menu {
+        gap: 25px;
+        font-size: 16px;
+    }
+    .nav-login-cart button {
+        width: 80px;
+        height: 35px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .nav-login-cart img {
+        width: 30px;
+    }
+    .nav-cart-count {
+        width: 18px;
+        height: 18px;
+    }
+}
+@media (max-width : 800px ) {
+    .navbar {
+        padding: 10px 0px;
+    }
+    .nav-logo {
+        padding-left: 30px;
+    }
+    .nav-logo .nav-logo-img2 {
+        display: none;
+    }
+    .nav-dropdown{
+        cursor: pointer;
+        display: block;
+        width: 30px;
+        rotate: -90deg;
+        transition: .5s;
+    }
+    .nav-menu {
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background-color: #fff;
+        justify-content: center;
+        top: 50px;
+    }
+    .nav-menu-visible {
+        display: flex;
+    }
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
+}
+@media (max-width : 500px ) {
+    .navbar {
+        padding: 8px 0px;
+    }
+    .nav-logo {
+        transform: scale(0.8);
+    }
+    .nav-menu {
+        font-size: 15px;
+        height: 70px;
+        top: 50px;
+    }
+    .nav-login-cart {
+        transform: scale(0.8);
+    }
+    .nav-login-cart button {
+        font-size: 16px;
+        font-weight: 700;
+        padding-bottom: 3px;
+    }
+
+}
