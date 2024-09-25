@@ -2,15 +2,16 @@ import React, { useRef } from 'react'
 import './CSS/LoginSignup.css'
 import { Link } from 'react-router-dom'
 import { Bounce, toast, ToastContainer, Zoom } from 'react-toastify'
-
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
 
     const name = localStorage.getItem("name")
     const password = localStorage.getItem("password")
-
     const nameRef = useRef()
     const passwordRef = useRef()
+    const navigate = useNavigate();
+
 
     const loginHandle = () => {
 
@@ -27,7 +28,10 @@ export default function LoginPage() {
                 theme: "colored",
                 transition: Zoom,
               });
-              setTimeout(()=> [window.location.assign('/')],3000)
+              setTimeout(() => {
+                navigate('/');
+                window.location.reload() 
+              }, 2000);
             }
             else if (!(name && password)) {
                 toast.error('This account does not exist⚠️', {
@@ -73,9 +77,6 @@ export default function LoginPage() {
 
     }
 
-
-
-
   return (
     <div className='login-signup'>
       <ToastContainer
@@ -97,7 +98,7 @@ export default function LoginPage() {
           <input ref={nameRef} type='text' placeholder='Your Name' />
           <input ref={passwordRef} type='password' placeholder='Password' />
         </div>
-        <button onClick={loginHandle} >Continue</button>
+        <button onClick={loginHandle}>Continue</button>
         <p className='login-signup-login'>Not have an account? <Link to='/signup'>Sign Up Here</Link></p>
       </div>
     </div>

@@ -22,13 +22,13 @@ export default function Footer() {
         </ul>
         <div className='footer-social-icon'>
              <div className='footer-icon-container'>
-                <a href="https://github.com/Ahmed-Soliman33"><img src={github_icon} /></a>
+                <a target='_blank' href="https://github.com/Ahmed-Soliman33"><img src={github_icon} /></a>
              </div>
              <div className='footer-icon-container'>
-                <a href="https://www.linkedin.com/in/ahmed-soliman-19901b325"><img src={linkedin_icon} /></a>
+                <a target='_blank' href="https://www.linkedin.com/in/ahmed-soliman-19901b325"><img src={linkedin_icon} /></a>
              </div>
              <div className='footer-icon-container'>
-                <a href="https://www.facebook.com/570ahmedelfares"><img src={facebook_icon} /></a>
+                <a target='_blank' href="https://www.facebook.com/570ahmedelfares"><img src={facebook_icon} /></a>
              </div>
         </div>
         <div className='footer-copyright'>

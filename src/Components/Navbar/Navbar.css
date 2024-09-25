@@ -180,6 +180,7 @@ a {
         background-color: #fff;
         justify-content: center;
         top: 50px;
+        z-index: 1;
     }
     .nav-menu-visible {
         display: flex;

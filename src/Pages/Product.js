@@ -5,7 +5,6 @@ import Breadcrum from '../Components/Breadcrum/Breadcrum'
 import ProductDisplay from '../Components/ProductDisplay/ProductDisplay'
 import DecriptionBox from '../Components/DecriptionBox/DecriptionBox'
 import RelatedProducts from '../Components/RelatedProducts/RelatedProducts'
-import Navbar from '../Components/Navbar/Navbar'
 
 export default function Product() {
 

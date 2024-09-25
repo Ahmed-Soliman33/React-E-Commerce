@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import LoginPage from './LoginPage'
 import { ToastContainer, toast , Bounce, Zoom  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginSignup() {
 
@@ -11,17 +12,19 @@ export default function LoginSignup() {
   const nameRef = useRef()
   const passwordRef = useRef()
   const checkRef = useRef()
+  const navigate = useNavigate();
+
 
   const loginHandle = (e) => {
-    e.preventDefault()
-    if (emailRef.current.value != '' && passwordRef.current.value != '' && nameRef.current.value != '' && checkRef.current.checked == true) {
+    if (emailRef.current.value !== '' && passwordRef.current.value !== '' && nameRef.current.value !== '' && checkRef.current.checked == true) {
       localStorage.setItem('name', nameRef.current.value)
       localStorage.setItem('email', emailRef.current.value)
       localStorage.setItem('password', passwordRef.current.value)
-      setTimeout(() => {
-        window.location.assign('/login')
-      }, 1500)
-      toast.success('Account has been Created', {
+        setTimeout(() => {
+          navigate('/login');
+          // window.location.reload() // Replace with your desired route
+        }, 1000);
+      toast.success('Account has been created', {
         position: "top-right",
         autoClose: 6000,
         hideProgressBar: false,
@@ -48,8 +51,8 @@ export default function LoginSignup() {
     }
   }
 
-  return (
 
+  return (
     <div className='login-signup'>
       <ToastContainer
         position="top-right"
