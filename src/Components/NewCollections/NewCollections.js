@@ -3,7 +3,7 @@ import './NewCollections.css'
 import new_collections from '../Assets/new_collections'
 import Item from '../Item/Item'
 
-export default function NewCollections() {
+const NewCollections = () => {
     return (
         <div className='new-collections'>
             <h1>NEW COLLECTIONS</h1>
@@ -16,3 +16,4 @@ export default function NewCollections() {
         </div>
     )
 }
+export default React.memo(NewCollections)

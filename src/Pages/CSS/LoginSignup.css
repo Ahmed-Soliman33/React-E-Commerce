@@ -10,6 +10,7 @@
     height: auto;
     background-color: #fff;
     margin: auto;
+    border-radius: 5px;
     padding: 40px 60px;
 }
 
@@ -60,6 +61,7 @@
 }
 .login-signup-login a {
     color: #ff4141;
+    font-size: 17px;
     font-weight: 600;
     cursor: pointer;
 }

@@ -5,7 +5,7 @@ import heroImg from '../Assets/hero_image.png'
 import tShirtImg from '../Assets/shit-red.png'
 
 
-export default function Hero() {
+const Hero = () => {
     return (
         <div className='hero'>
             <div className='hero-left' >
@@ -30,3 +30,5 @@ export default function Hero() {
         </div>
     )
 }
+
+export default React.memo(Hero)

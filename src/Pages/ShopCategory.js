@@ -7,7 +7,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-export default function ShopCategory(props) {
+const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext)
 
   useEffect(() => {
@@ -40,3 +40,4 @@ export default function ShopCategory(props) {
     </div>
   )
 }
+export default React.memo(ShopCategory)

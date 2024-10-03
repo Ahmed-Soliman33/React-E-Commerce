@@ -104,7 +104,15 @@
     .footer-social-icon img {
         width: 30px;
     }
-    .footer-copyright {
-        font-size: 13px;
+    .footer-copyright p {
+        font-size: 17px;
+    }
+}
+@media (max-width:500px) {
+    .footer-copyright p {
+        font-size: 15px;
+    }
+    .footer-icon-container a img {
+        width: 22px;
     }
 }

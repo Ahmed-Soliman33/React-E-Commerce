@@ -5,7 +5,7 @@ import Offers from '../Components/Offers/Offers'
 import NewCollections from '../Components/NewCollections/NewCollections'
 import NewsLetter from '../Components/NewsLetter/NewsLetter'
 
-export default function Shop() {
+const Shop = () => {
 
 
 
@@ -20,3 +20,4 @@ export default function Shop() {
     </>
   )
 }
+export default React.memo(Shop)

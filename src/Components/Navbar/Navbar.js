@@ -5,8 +5,8 @@ import cartIcon from '../Assets/cart_icon.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 import nav_dropdown from '../Assets/nav_dropdown.png'
-import { Bounce, toast, ToastContainer, Zoom } from 'react-toastify'
-
+import { ToastContainer, toast , Bounce, Zoom  } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Navbar() {
 
@@ -27,23 +27,25 @@ export default function Navbar() {
         if (name && password) {
             toast.success('Account has been Deleted', {
                 position: "top-right",
-                autoClose: 6000,
+                autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
                 progress: undefined,
                 theme: "colored",
                 transition: Zoom,
-                });
-                setTimeout(() => {
-                    localStorage.clear()
-                    navigate('/signup');
-                    // window.location.reload()
-                  }, 1000);
+            });
+            setTimeout(() => {
+                localStorage.clear();
+                navigate('/');
+                window.location.reload()
+            }, 2000);
         }
         else {
             setTimeout(() => {
                 navigate('/login'); // Replace with your desired route
-              }, 1000);
+            }, 1000);
         }
     }
 
@@ -53,6 +55,7 @@ export default function Navbar() {
             <Link to='/' className='nav-logo' >
                 <img className='nav-logo-img1' src={logo} />
                 <p className='nav-logo-img2'>evo<span>Shop</span></p>
+                <ToastContainer className='toast' />
             </Link>
             <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} />
             <ul ref={menuRef} className='nav-menu'>

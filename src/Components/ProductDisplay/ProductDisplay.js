@@ -6,7 +6,7 @@ import {ShopContext} from '../../Context/ShopContext'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-export default function ProductDisplay(props) {
+const ProductDisplay = (props) => {
     const { product } = props;
     const {addToCart} = useContext(ShopContext)
 
@@ -62,3 +62,4 @@ export default function ProductDisplay(props) {
         </div>
     )
 }
+export default React.memo(ProductDisplay)

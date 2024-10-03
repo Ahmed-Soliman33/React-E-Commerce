@@ -3,7 +3,7 @@ import './Popular.css'
 import data_product from '../Assets/data'
 import Item from '../Item/Item'
 
-export default function Popular() {
+const Popular = () => {
     return (
         <div className='popular'>
             <h1>Popular In Women</h1>
@@ -16,3 +16,4 @@ export default function Popular() {
         </div>
     )
 }
+export default React.memo(Popular)

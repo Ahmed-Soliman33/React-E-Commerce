@@ -91,7 +91,7 @@ export default function LoginPage() {
         pauseOnHover
         theme="colored"
         transition={Bounce} 
-        />
+        className='ToastContainer'/>
       <div className='login-signup-container'>
         <h1>Log In</h1>
         <div className='login-signup-fields'>

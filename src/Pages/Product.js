@@ -6,7 +6,7 @@ import ProductDisplay from '../Components/ProductDisplay/ProductDisplay'
 import DecriptionBox from '../Components/DecriptionBox/DecriptionBox'
 import RelatedProducts from '../Components/RelatedProducts/RelatedProducts'
 
-export default function Product() {
+const Product = () => {
 
   const {all_product} = useContext(ShopContext)
   const {productId} = useParams()
@@ -23,3 +23,4 @@ export default function Product() {
     </div>
   )
 }
+export default React.memo(Product)

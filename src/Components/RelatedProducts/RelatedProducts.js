@@ -3,7 +3,7 @@ import './RelatedProducts.css'
 import data_product from '../Assets/data'
 import Item from '../Item/Item'
 
-export default function RelatedProducts() {
+const RelatedProducts = () => {
     return (
         <div className='RelatedProducts'>
             <h1>Related Products</h1>
@@ -16,3 +16,4 @@ export default function RelatedProducts() {
         </div>
     )
 }
+export default React.memo(RelatedProducts)

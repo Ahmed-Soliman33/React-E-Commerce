@@ -209,5 +209,7 @@ a {
         font-weight: 700;
         padding-bottom: 3px;
     }
-
+    .toast {
+        margin-top: 50px !important;
+    }
 }

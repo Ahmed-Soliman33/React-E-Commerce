@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-export default function Item(props) {
+const Item = (props) => {
   useEffect(()=>{
     Aos.init({duration:1000})
+    window.scrollTo(0,0)
   },[])
 
   return (
-    <div className='item'  data-aos="flip-left"  data-aos-duration="1500" >
-       <Link to={`/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} /></Link> 
+    <div className='item' onClick={()=> {window.scrollTo(0,0)}}  data-aos="flip-left"  data-aos-duration="1500" >
+       <Link to={`/product/${props.id}`}><img src={props.image} /></Link> 
         <p>{props.name}</p>
         <div className='item-prices'>
             <div className='item-price-new'>
@@ -24,3 +25,4 @@ export default function Item(props) {
     </div>
   )
 }
+export default React.memo(Item)

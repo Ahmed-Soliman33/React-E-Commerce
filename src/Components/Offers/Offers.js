@@ -3,7 +3,7 @@ import './Offers.css'
 import exclusive_image from '../Assets/exclusive_image.png' 
 import { Link } from 'react-router-dom'
 
-export default function Offers() {
+const Offers = () => {
   return (
     <div className='offers'>
         <div className='offers-left'>
@@ -18,3 +18,4 @@ export default function Offers() {
     </div>
   )
 }
+export default React.memo(Offers)

@@ -3,7 +3,7 @@ import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
 
-export default function CartItems() {
+const CartItems = () => {
 
     const { getTotalCartAmount , all_product, cartItems, removeFromCart } = useContext(ShopContext)
 
@@ -66,3 +66,6 @@ export default function CartItems() {
         </div>
     )
 }
+
+
+export default React.memo(CartItems)
